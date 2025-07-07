@@ -34,6 +34,7 @@ public class Player {
      health-= amount;
   }
 
+ // to use if the player first aid kit
   public void increaseHealth(int amount){
      health+= amount;
   }
