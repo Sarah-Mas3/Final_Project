@@ -15,7 +15,7 @@ public class Map {
         traps = new HashMap<>();
         usedPositions = new HashSet<>();
          firstAids = new HashMap<>();
-        initializeMap(level);
+        initializeMap(level); // the map with treasure , traps and first aid kit
     }
 
     public void initializeMap(Level level) {
@@ -29,7 +29,7 @@ public class Map {
             do {
                 x = random.nextInt(size);
                 y = random.nextInt(size);
-            } while (usedPositions.contains(x + "," + y));
+            } while (usedPositions.contains(x + "," + y)|| x == 0 && y == 0 );
             traps.put(x + "," + y, "You fell in a trap! -20 energy.");
             usedPositions.add(x + "," + y);
             map[x][y] = 'T';
@@ -41,7 +41,7 @@ public class Map {
             do {
                 x = random.nextInt(size);
                 y = random.nextInt(size);
-            } while (usedPositions.contains(x + "," + y));
+            } while (usedPositions.contains(x + "," + y) || x == 0 && y == 0);
             firstAids.put(x + "," + y, "You found a first aid kit! +15 energy.");
             usedPositions.add(x + "," + y);
             map[x][y] = 'F'; // first aid kits
@@ -99,7 +99,4 @@ public class Map {
         return size;
     }
 
-    public char[][] getMap() {
-        return map;
-    }
 }
