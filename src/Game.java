@@ -17,14 +17,4 @@ public class Game {
         return player;
     }
 
-    public Level getCurrentLevel() {
-        return currentLevel;
-    }
-
-    public void resetLevel(Level newLevel) {
-        this.currentLevel = newLevel;
-        this.map = new Map(newLevel);
-        this.player.reset();
-    }
-
 }
