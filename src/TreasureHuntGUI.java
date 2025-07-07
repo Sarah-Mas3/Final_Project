@@ -110,8 +110,6 @@ public class TreasureHuntGUI extends JFrame {
             return;
         }
 
-        player.decreaseHealth(10);
-
         if (map.isTrap(x, y)) {
             player.decreaseHealth(20);
             JOptionPane.showMessageDialog(this, "🪤 You fell into a trap! -20 health.");
@@ -124,6 +122,7 @@ public class TreasureHuntGUI extends JFrame {
             JOptionPane.showMessageDialog(this, "🎯 You found the treasure! You win!");
             hintLabel.setText("Congratulations! You found the treasure!");
         } else {
+            player.decreaseHealth(10);
             hintLabel.setText("Hint: " + map.getHintMessage(x, y));
         }
 
