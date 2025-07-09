@@ -29,7 +29,7 @@ public class Map {
             do {
                 x = random.nextInt(size);
                 y = random.nextInt(size);
-            } while (usedPositions.contains(x + "," + y)|| (x == 0 && y == 0));
+            } while (usedPositions.contains(x + "," + y)|| (x == 0 && y == 0)); // doesnt save x,y if they were already use or equal 0
             traps.put(x + "," + y, "You fell in a trap! -20 energy.");
             usedPositions.add(x + "," + y);
             map[x][y] = 'T';
