@@ -1,7 +1,6 @@
 // Importing required Swing and AWT classes for GUI
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 // Main class extending JFrame for GUI window
 public class TreasureHuntGUI extends JFrame {
